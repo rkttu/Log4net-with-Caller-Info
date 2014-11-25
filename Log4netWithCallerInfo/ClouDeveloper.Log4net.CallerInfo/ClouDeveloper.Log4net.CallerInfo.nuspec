@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
-        <id>ClouDeveloper.Log4net.CallerInfo</id>
+        <id>log4net-callerinfo</id>
         <version>1.0.0</version>
         <title>ClouDeveloper Log4net CallerInfo Extensions</title>
         <authors>ClouDeveloper</authors>
@@ -12,7 +12,7 @@
         <description>This package provides extended features to log4net.</description>
         <summary>This package provides extended features to log4net.</summary>
         <copyright>(c) ClouDeveloper, All rights reserved.</copyright>
-        <tags>log4net cloudeveloper callerinfo</tags>
+        <tags>log4net cloudeveloper callerinfo log4net-callerinfo</tags>
         <dependencies>
             <group targetFramework=".NETFramework4.0">
                 <dependency id="log4net" version="2.0.3" />
