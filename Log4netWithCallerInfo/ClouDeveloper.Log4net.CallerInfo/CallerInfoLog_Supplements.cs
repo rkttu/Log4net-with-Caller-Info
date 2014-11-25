@@ -8,6 +8,13 @@ namespace ClouDeveloper.Log4net.CallerInfo
 {
     partial class CallerInfoLog
     {
+        /// <summary>
+        /// Creates the caller information string.
+        /// </summary>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerFilePath">The caller file path.</param>
+        /// <param name="callerLineNumber">The caller line number.</param>
+        /// <returns></returns>
         private string CreateCallerInfoString(string callerName, string callerFilePath, int callerLineNumber)
         {
             if (String.IsNullOrWhiteSpace(callerFilePath))
@@ -25,6 +32,11 @@ namespace ClouDeveloper.Log4net.CallerInfo
             return String.Concat("[", callerName, ", ", callerFilePath, ":", callerLineNumber, "]");
         }
 
+        /// <summary>
+        /// Renders the object message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <returns></returns>
         private string RenderObjectMessage(object message)
         {
             try
@@ -52,6 +64,14 @@ namespace ClouDeveloper.Log4net.CallerInfo
             }
         }
 
+        /// <summary>
+        /// Creates the log message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerFilePath">The caller file path.</param>
+        /// <param name="callerLineNumber">The caller line number.</param>
+        /// <returns></returns>
         private string CreateLogMessage(object message, string callerName, string callerFilePath, int callerLineNumber)
         {
             return String.Concat(
@@ -59,6 +79,16 @@ namespace ClouDeveloper.Log4net.CallerInfo
                 this.RenderObjectMessage(message));
         }
 
+        /// <summary>
+        /// Creates the log message.
+        /// </summary>
+        /// <param name="provider">The provider.</param>
+        /// <param name="format">The format.</param>
+        /// <param name="args">The arguments.</param>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerFilePath">The caller file path.</param>
+        /// <param name="callerLineNumber">The caller line number.</param>
+        /// <returns></returns>
         private string CreateLogMessage(IFormatProvider provider, string format, object[] args, string callerName, string callerFilePath, int callerLineNumber)
         {
             return this.CreateLogMessage(
@@ -66,6 +96,15 @@ namespace ClouDeveloper.Log4net.CallerInfo
                 callerName, callerFilePath, callerLineNumber);
         }
 
+        /// <summary>
+        /// Creates the log message.
+        /// </summary>
+        /// <param name="format">The format.</param>
+        /// <param name="args">The arguments.</param>
+        /// <param name="callerName">Name of the caller.</param>
+        /// <param name="callerFilePath">The caller file path.</param>
+        /// <param name="callerLineNumber">The caller line number.</param>
+        /// <returns></returns>
         private string CreateLogMessage(string format, object[] args, string callerName, string callerFilePath, int callerLineNumber)
         {
             return this.CreateLogMessage(

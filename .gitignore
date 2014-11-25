@@ -181,3 +181,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+/Log4netWithCallerInfo/ClouDeveloper.Log4net.CallerInfo/ClouDeveloper.Log4net.CallerInfo.xml

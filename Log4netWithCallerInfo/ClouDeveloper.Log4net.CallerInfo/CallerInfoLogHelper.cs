@@ -3,6 +3,9 @@ using System;
 
 namespace ClouDeveloper.Log4net.CallerInfo
 {
+    /// <summary>
+    /// CallerInfoLogHelper
+    /// </summary>
     public static class CallerInfoLogHelper
     {
         /// <summary>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>ClouDeveloper.Log4net.CallerInfo</id>
+        <version>1.0.0</version>
+        <title>ClouDeveloper Log4net CallerInfo Extensions</title>
+        <authors>ClouDeveloper</authors>
+        <owners>ClouDeveloper</owners>
+        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+        <projectUrl>https://github.com/rkttu/Log4net-with-Caller-Info</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package provides extended features to log4net.</description>
+        <summary>This package provides extended features to log4net.</summary>
+        <copyright>(c) ClouDeveloper, All rights reserved.</copyright>
+        <tags>log4net cloudeveloper callerinfo</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.0">
+                <dependency id="log4net" version="2.0.3" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\ClouDeveloper.Log4net.CallerInfo.dll" target="lib\net40\ClouDeveloper.Log4net.CallerInfo.dll" />
+        <file src="bin\Release\ClouDeveloper.Log4net.CallerInfo.pdb" target="lib\net40\ClouDeveloper.Log4net.CallerInfo.pdb" />
+        <file src="bin\Release\ClouDeveloper.Log4net.CallerInfo.xml" target="lib\net40\ClouDeveloper.Log4net.CallerInfo.xml" />
+    </files>
+</package>
