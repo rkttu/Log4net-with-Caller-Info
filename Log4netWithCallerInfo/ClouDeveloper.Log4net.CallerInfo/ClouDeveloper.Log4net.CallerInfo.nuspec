@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>log4net-callerinfo</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>ClouDeveloper Log4net CallerInfo Extensions</title>
         <authors>ClouDeveloper</authors>
         <owners>ClouDeveloper</owners>

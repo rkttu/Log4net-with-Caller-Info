@@ -28,5 +28,15 @@ namespace ClouDeveloper.Log4net.CallerInfo
         {
             return new CallerInfoLog(LogManager.GetLogger(typeInfo));
         }
+
+        /// <summary>
+        /// Obtains the log.
+        /// </summary>
+        /// <param name="log">The log.</param>
+        /// <returns></returns>
+        public static CallerInfoLog ObtainLog(this ILog log)
+        {
+            return new CallerInfoLog(log);
+        }
     }
 }
