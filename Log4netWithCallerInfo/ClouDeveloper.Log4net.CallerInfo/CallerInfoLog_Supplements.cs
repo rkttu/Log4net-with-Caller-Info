@@ -29,7 +29,10 @@ namespace ClouDeveloper.Log4net.CallerInfo
                 callerLineNumber = 0;
             if (String.IsNullOrWhiteSpace(callerName))
                 callerName = "unknown member";
-            return String.Concat("[", callerName, ", ", callerFilePath, ":", callerLineNumber, "]");
+            if (this.Signature.HasValue)
+                return String.Concat("[#", this.Signature.Value.ToString("x"), ", ", callerName, ", ", callerFilePath, ":", callerLineNumber, "]");
+            else
+                return String.Concat("[", callerName, ", ", callerFilePath, ":", callerLineNumber, "]");
         }
 
         /// <summary>

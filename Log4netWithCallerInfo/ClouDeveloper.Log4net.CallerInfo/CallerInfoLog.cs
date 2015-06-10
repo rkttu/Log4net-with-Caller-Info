@@ -4,18 +4,50 @@ using System;
 namespace ClouDeveloper.Log4net.CallerInfo
 {
     /// <summary>
-    /// 
+    /// CallerInfoLog
     /// </summary>
     public sealed partial class CallerInfoLog
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallerInfoLog"/> class.
+        /// Initializes a new instance of the <see cref="CallerInfoLog" /> class.
         /// </summary>
         /// <param name="log">The log.</param>
-        public CallerInfoLog(ILog log)
+        /// <param name="enableSignature">if set to <c>true</c> [enable signature].</param>
+        public CallerInfoLog(ILog log, bool enableSignature)
             : base()
         {
             this.UnderlyingLogObject = log;
+
+            if (enableSignature)
+            {
+                DateTime unixTimestampPoint =
+                    new DateTime(1970, 1, 1, 0, 0, 0, 0)
+                    .ToLocalTime();
+                TimeSpan offset = DateTime.Now - unixTimestampPoint;
+
+                this.Signature = (long)offset.TotalSeconds;
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CallerInfoLog" /> class.
+        /// </summary>
+        /// <param name="log">The log.</param>
+        public CallerInfoLog(ILog log)
+            : this(log, false)
+        {
+        }
+
+        /// <summary>
+        /// Gets or sets the signature.
+        /// </summary>
+        /// <value>
+        /// The signature.
+        /// </value>
+        public long? Signature
+        {
+            get;
+            private set;
         }
 
         /// <summary>
