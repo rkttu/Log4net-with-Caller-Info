@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
-        <id>$id$</id>
+        <id>log4net-callerinfo</id>
         <version>$version$</version>
         <title>$title$</title>
         <authors>$author$</authors>
