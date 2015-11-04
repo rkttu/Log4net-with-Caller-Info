@@ -25,7 +25,7 @@ namespace ClouDeveloper.Log4net.CallerInfo
                     .ToLocalTime();
                 TimeSpan offset = DateTime.Now - unixTimestampPoint;
 
-                this.Signature = (long)offset.TotalSeconds;
+                this.Signature = (long)offset.TotalMilliseconds;
             }
         }
 
