@@ -1,5 +1,6 @@
 ﻿using log4net;
 using System;
+using System.Threading;
 
 namespace ClouDeveloper.Log4net.CallerInfo
 {
@@ -8,6 +9,8 @@ namespace ClouDeveloper.Log4net.CallerInfo
     /// </summary>
     public sealed partial class CallerInfoLog
     {
+        private static long InternalSignatureCount = 0L;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CallerInfoLog" /> class.
         /// </summary>
@@ -19,14 +22,7 @@ namespace ClouDeveloper.Log4net.CallerInfo
             this.UnderlyingLogObject = log;
 
             if (enableSignature)
-            {
-                DateTime unixTimestampPoint =
-                    new DateTime(1970, 1, 1, 0, 0, 0, 0)
-                    .ToLocalTime();
-                TimeSpan offset = DateTime.Now - unixTimestampPoint;
-
-                this.Signature = (long)offset.TotalMilliseconds;
-            }
+                this.Signature = Interlocked.Increment(ref InternalSignatureCount);
         }
 
         /// <summary>
